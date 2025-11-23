@@ -1,0 +1,23 @@
+{
+  "name": "blog1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vicons/ionicons5": "^0.13.0",
+    "cropperjs": "^1.6.2",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.24",
+    "vue-cropperjs": "^5.0.0",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.2.4"
+  }
+}

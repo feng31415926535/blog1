@@ -1,0 +1,186 @@
+/* 导入cropperjs样式 */
+
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --header-bg: #35495e;
+  --accent-color: #42b883;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  --bg-color: #0f2044;
+  --text-color: #ffffff;
+  --card-bg: #162447;
+  --header-bg: linear-gradient(135deg, #0a192f 0%, #0f2044 100%);
+  --accent-color: #4ade80;
+  --border-color: #2d4263;
+}
+
+.footer {
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.tag-navigation {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.article-content {
+  background-color: var(--card-bg);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.article-card, .article-content {
+  background-color: var(--card-bg);
+  transition: background-color 0.3s;
+}
+
+:root.dark {
+  --bg-color: #0f2044 !important;
+  --text-color: #ffffff;
+  --card-bg: #162447;
+  --header-bg: linear-gradient(135deg, #0a192f 0%, #0f2044 100%);
+  --accent-color: #4ade80;
+  --border-color: #2d4263;
+}
+
+/* 暗色模式下h1和div文字颜色 */
+:root.dark h1,
+:root.dark div {
+  color: var(--text-color) !important;
+}
+
+:root.dark .sidebar,
+:root.dark .top-nav,
+:root.dark .footer,
+:root.dark .tag-navigation {
+  background-color: var(--bg-color) !important;
+  transition: background-color 0.3s;
+}
+
+/* 确保组件内元素继承暗色模式样式 */
+:root.dark ::v-deep * {
+  color: var(--text-color) !important;
+}
+
+:root.dark .article-summary {
+  color: var(--text-color) !important;
+}
+
+
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.header-banner {
+  background: linear-gradient(rgba(53, 73, 94, 0.8), rgba(53, 73, 94, 0.9)), url('https://picsum.photos/id/1043/1200/300');
+}
+
+:root.dark .header-banner {
+  background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.95)), url('https://picsum.photos/id/1043/1200/300');
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    padding: 0.5rem 1rem;
+  }
+  .nav-right {
+    gap: 0.5rem;
+  }
+  .admin-user-menu span {
+    display: none;
+  }
+  .theme-toggle, .login-btn { display: flex; align-items: center; justify-content: center; padding: 4px 8px; font-size: 0.8rem;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: hsl(238, 72%, 10%);
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
